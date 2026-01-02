@@ -164,3 +164,9 @@ cython_debug/
 
 # JetBrains specific evaluation/dataset cache
 .jbeval/
+
+# macOS files
+.DS_Store
+
+# Astra files
+*.asta.lock
