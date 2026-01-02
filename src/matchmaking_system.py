@@ -19,14 +19,14 @@ class MatchmakingSystem:
 
         return sorted_candidates[0]
 
-    def match_all(self, individual: List[Individual]) -> Dict[Individual, Individual]:
+    def match_all(self, individuals: List[Individual]) -> Dict[Individual, Individual]:
 
         results = {}
 
         print(f"--- 開始執行配對 ---")
 
-        for me in individual:
-            others = [p for p in individual if p.id != me.id]
+        for me in individuals:
+            others = [p for p in individuals if p.id != me.id]
 
             if not others:
                 print(f"User {me.id} 沒有其他候選人可配對")
