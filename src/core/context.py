@@ -1,6 +1,6 @@
 from typing import List, Optional, Tuple
 
-from .models import CardGame, Player, Card, Deck
+from .models import CardGame, Player, Card
 
 
 class GameContext:
@@ -27,6 +27,9 @@ class GameContext:
                 if card := self._game.deck.draw_card():
                     player.add_card(card)
 
+    def add_card(self, cards: List[Card]):
+        self._game.deck.add_cards(cards)
+
     def draw_card(self) -> Optional[Card]:
         if self._game.deck:
             return self._game.deck.draw_card()
@@ -40,15 +43,11 @@ class GameContext:
                 return card
         return None
 
-    def player_play_card(self, player: Player, card: Card):
-        if card in player.hand:
-            player.remove_card(card)
+    def player_play_card(self, player: Player, context: dict) -> Optional[Card]:
+        return player.take_turn(context)
 
     def set_winner(self, player: Player):
         self._game.table_data["winner"] = player
 
-    def is_empty(self):
+    def is_card_empty(self):
         return self._game.deck.is_empty()
-
-    def add_card(self, cards: List[Card]):
-        self._game.deck.add_cards(cards)

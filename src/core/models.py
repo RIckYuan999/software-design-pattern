@@ -51,7 +51,10 @@ class Player:
 
     def take_turn(self, context: Dict[str, Any]) -> Optional[Card]:
         context["player_name"] = self._name
-        return self._mind.decide(self._hand, context)
+        card = self._mind.decide(self._hand, context)
+        if card:
+            self.remove_card(card)
+        return card
 
 
 @dataclass

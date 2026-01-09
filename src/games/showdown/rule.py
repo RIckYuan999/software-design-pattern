@@ -31,9 +31,8 @@ class ShowdownRule(GameRule):
         # 回合暫存
         moves = []
         for player in context.players:
-            card = player.take_turn({})
+            card = context.player_play_card(player, {})
             if card:
-                context.player_play_card(player, card)
                 moves.append((player, card))
 
         print(f"\n----- 回合 {context.table_data['round']} 結算 -----")

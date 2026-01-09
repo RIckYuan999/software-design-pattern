@@ -24,8 +24,7 @@ class UnoRule(GameRule):
         context.table_data["winner"] = None
 
         # 翻一張牌到台上
-        start_card = context.player_draw_card(context.players[0]) # 借用 player 抽牌方法
-        context.player_play_card(context.players[0], start_card)
+        start_card = context.draw_card()
         context.table_data["discard"].append(start_card)
         print(f"\n----- 起始牌：{start_card} -----")
 
@@ -39,15 +38,14 @@ class UnoRule(GameRule):
                      if card.color == context.table_data["discard"][-1].color
                      or card.number == context.table_data["discard"][-1].number]
 
-            card = player.take_turn({"valid_indices": valid})
+            card = context.player_play_card(player, {"valid_indices": valid})
             if card:
                 # 出牌
-                context.player_play_card(player, card)
                 context.table_data["discard"].append(card)
 
             else:
                 # 檢查牌組是否為空
-                if context.is_empty():
+                if context.is_card_empty():
                     print("\n ===== 牌組重新洗牌中 =====")
                     cards_to_add = context.table_data["discard"][:-1]
                     context.table_data["discard"] = cards_to_add
@@ -56,8 +54,6 @@ class UnoRule(GameRule):
 
                 print(f"\n----- {player.name} 抽牌 -----")
                 context.player_draw_card(player)
-
-
 
             # 檢查獲勝者
             if len(player.hand) == 0:
