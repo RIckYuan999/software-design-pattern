@@ -13,7 +13,6 @@ class ShowdownRule(GameRule):
 
     def on_game_start(self, context: GameContext):
 
-
         # 洗牌/發牌
         print("\n===== 洗牌與發牌 =====")
         context.shuffle_deck()
