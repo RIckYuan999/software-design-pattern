@@ -18,7 +18,7 @@ class GameRule(ABC):
         pass
 
     @abstractmethod
-    def create_desk(self) -> 'Deck':
+    def create_deck(self) -> 'Deck':
         pass
 
     @abstractmethod

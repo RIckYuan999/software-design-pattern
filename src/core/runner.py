@@ -15,7 +15,7 @@ class GameRunner:
         print(f"\n====== 遊戲引擎 {self._rule.__class__.__name__} 啟動 =====")
 
         # Step 1: 創建牌組
-        self._game.deck = self._rule.create_desk()
+        self._game.deck = self._rule.create_deck()
 
         # 建立防腐層
         safe_ctx = GameContext(self._game)

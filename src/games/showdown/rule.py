@@ -8,7 +8,7 @@ class ShowdownRule(GameRule):
     def player_range(self) -> Tuple[int, int]:
         return 4, 4
 
-    def create_desk(self) -> Deck:
+    def create_deck(self) -> Deck:
         return Deck([ShowdownCard(suit, rank) for suit in Suit for rank in Rank])
 
     def on_game_start(self, context: GameContext):

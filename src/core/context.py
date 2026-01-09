@@ -13,10 +13,6 @@ class GameContext:
         return tuple(self._game.players)
 
     @property
-    def deck(self) -> Deck:
-        return self._game.deck
-
-    @property
     def table_data(self) -> dict:
         return self._game.table_data
 
@@ -50,3 +46,9 @@ class GameContext:
 
     def set_winner(self, player: Player):
         self._game.table_data["winner"] = player
+
+    def is_empty(self):
+        return self._game.deck.is_empty()
+
+    def add_card(self, cards: List[Card]):
+        self._game.deck.add_cards(cards)
