@@ -38,21 +38,25 @@ class OnePunchHandler(ABC):
 class HighHpHandler(OnePunchHandler):
     def calculate(self, user: Unit, target: Unit) -> Optional[DamageResult]:
         if target.hp >= 500:
-            return DamageResult(damage=300)
+            dmp = user.get_outgoing_damage(300)
+            return DamageResult(damage=dmp)
         return None
 
 class AbnormalStateHandler(OnePunchHandler):
     def calculate(self, user: Unit, target: Unit) -> Optional[DamageResult]:
         if target.is_in_state(StateType.ABNORMAL):
-            return DamageResult(damage=80, repeat=3)
+            dmg = user.get_outgoing_damage(80)
+            return DamageResult(damage=dmg, repeat=3)
         return None
 
 class BuffStateHandler(OnePunchHandler):
     def calculate(self, user: Unit, target: Unit) -> Optional[DamageResult]:
         if target.is_in_state(StateType.BUFF):
-            return DamageResult(damage=100, clear_state=True)
+            dmp = user.get_outgoing_damage(100)
+            return DamageResult(damage=dmp, clear_state=True)
         return None
 
 class DefaultHandler(OnePunchHandler):
     def calculate(self, user: Unit, target: Unit) -> Optional[DamageResult]:
-        return DamageResult(damage=100)
+        dmg = user.get_outgoing_damage(100)
+        return DamageResult(damage=dmg)

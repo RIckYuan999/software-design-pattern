@@ -142,10 +142,11 @@ class SelfExplosion(Action):
         real_targets = [u for u in battle.get_all_units() if u != user]
         names = ", ".join([t.display_name for t in real_targets])
         print(f"{user.display_name} 對 {names} 使用了 自爆。")
+        dmp = user.get_outgoing_damage(150)
 
         for u in real_targets:
-            print(f"{user.display_name} 對 {u.display_name} 造成 150 點傷害。")
-            u.take_damage(150)
+            print(f"{user.display_name} 對 {u.display_name} 造成 {dmp} 點傷害。")
+            u.take_damage(dmp)
         
         user.take_damage(user.hp)
 
