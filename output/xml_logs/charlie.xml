@@ -1,0 +1,60 @@
+<case>
+  <case_time>2026-02-13 13:09:24.741655</case_time>
+  <symptoms>['Headache', 'Cough']</symptoms>
+  <prescriptions>
+    <prescription>
+      <name>清冠一號</name>
+      <potential_disease>新冠肺炎（專業學名：COVID-19）</potential_disease>
+      <medicines>['清冠一號']</medicines>
+      <usage>相關藥材裝入茶包裡，使用500 mL 溫、熱水沖泡悶煮1~3 分鐘後即可飲用。</usage>
+    </prescription>
+  </prescriptions>
+</case>
+<case>
+  <case_time>2026-02-13 13:15:28.641082</case_time>
+  <symptoms>['Headache', 'Cough']</symptoms>
+  <prescriptions>
+    <prescription>
+      <name>清冠一號</name>
+      <potential_disease>新冠肺炎（專業學名：COVID-19）</potential_disease>
+      <medicines>['清冠一號']</medicines>
+      <usage>相關藥材裝入茶包裡，使用500 mL 溫、熱水沖泡悶煮1~3 分鐘後即可飲用。</usage>
+    </prescription>
+  </prescriptions>
+</case>
+<case>
+  <case_time>2026-02-13 13:16:05.984425</case_time>
+  <symptoms>['Headache', 'Cough']</symptoms>
+  <prescriptions>
+    <prescription>
+      <name>清冠一號</name>
+      <potential_disease>新冠肺炎（專業學名：COVID-19）</potential_disease>
+      <medicines>['清冠一號']</medicines>
+      <usage>相關藥材裝入茶包裡，使用500 mL 溫、熱水沖泡悶煮1~3 分鐘後即可飲用。</usage>
+    </prescription>
+  </prescriptions>
+</case>
+<case>
+  <case_time>2026-02-13 13:16:21.613389</case_time>
+  <symptoms>['Headache', 'Cough']</symptoms>
+  <prescriptions>
+    <prescription>
+      <name>清冠一號</name>
+      <potential_disease>新冠肺炎（專業學名：COVID-19）</potential_disease>
+      <medicines>['清冠一號']</medicines>
+      <usage>相關藥材裝入茶包裡，使用500 mL 溫、熱水沖泡悶煮1~3 分鐘後即可飲用。</usage>
+    </prescription>
+  </prescriptions>
+</case>
+<case>
+  <case_time>2026-02-13 13:19:05.663344</case_time>
+  <symptoms>['Headache', 'Cough']</symptoms>
+  <prescriptions>
+    <prescription>
+      <name>清冠一號</name>
+      <potential_disease>新冠肺炎（專業學名：COVID-19）</potential_disease>
+      <medicines>['清冠一號']</medicines>
+      <usage>相關藥材裝入茶包裡，使用500 mL 溫、熱水沖泡悶煮1~3 分鐘後即可飲用。</usage>
+    </prescription>
+  </prescriptions>
+</case>
